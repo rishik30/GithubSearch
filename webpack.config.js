@@ -20,7 +20,8 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ["es2015", "stage-1", "react"]
+                            presets: ["es2015", "stage-1", "react"],
+                            plugins: [["import", { libraryName: "antd", "libraryDirectory": "lib", style: "css" }]]
                         }
                     }
                 ],
@@ -32,14 +33,20 @@ module.exports = {
                     fallback: "style-loader",
                     use: ["css-loader", "sass-loader"]
                 })
+            },
+            {   test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
+    },
+    node: {
+        fs: 'empty'
     },
     plugins: [
         extractPlugin
     ],
     devServer: {
         historyApiFallback: true,        /* History API will fall back to index.html
-                                        resolves Cannot GET /[page_name]*/                             
+                                        resolves Cannot GET /[page_name]*/
     }
 }
