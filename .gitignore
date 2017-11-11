@@ -1,9 +1,7 @@
 node_modules
 
 #build files
-build/*.js
 build/*.html
-build/*.css
 build/*/*.js
 build/*/*.css
 build/*/*.html

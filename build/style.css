@@ -1,0 +1,104 @@
+#github-search-app {
+  width: 100%;
+  height: 100%; }
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center; }
+
+form {
+  width: 400px;
+  max-width: 400px;
+  margin: 2rem auto !important; }
+
+form button {
+  width: 100%; }
+
+.github-login-button {
+  margin-top: 7px; }
+
+.userDetails {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 60px; }
+  .userDetails .userSection {
+    flex: 1.3; }
+    .userDetails .userSection .ant-card {
+      margin: 10px auto 0; }
+      .userDetails .userSection .ant-card .custom-card {
+        padding: 10px; }
+        .userDetails .userSection .ant-card .custom-card h3 {
+          font-weight: 700;
+          font-size: 1.5rem;
+          margin-bottom: 8px; }
+        .userDetails .userSection .ant-card .custom-card p {
+          color: rgba(0, 0, 0, 0.7);
+          font-size: 1rem;
+          word-wrap: break-word; }
+  .userDetails .userRepos {
+    flex: 2.7;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    overflow-x: hidden;
+    overflow-y: scroll; }
+    .userDetails .userRepos .repoCard {
+      width: 360px;
+      margin: 10px; }
+      .userDetails .userRepos .repoCard .ant-card-head-title {
+        color: #0366d6; }
+      .userDetails .userRepos .repoCard p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 10px; }
+    .userDetails .userRepos .meta {
+      display: flex; }
+      .userDetails .userRepos .meta li {
+        margin-right: 15px; }
+        .userDetails .userRepos .meta li span {
+          margin-left: 4px; }
+
+.sortOptions {
+  float: right;
+  margin-top: 20px;
+  margin-right: 60px; }
+  .sortOptions span {
+    margin: 5px 10px;
+    color: #0366d6;
+    cursor: pointer;
+    text-decoration: underline; }
+    .sortOptions span:nth-child(1) {
+      color: rgba(0, 0, 0, 0.7);
+      cursor: default;
+      text-decoration: none; }
+
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+  .loader .loader-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: 160px;
+    height: 40px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px 0 rgab(#000, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    background-color: #16a085;
+    z-index: 3; }
+    .loader .loader-container.active {
+      opacity: 1;
+      transform: translate3d(-50%, 50px, 0); }
